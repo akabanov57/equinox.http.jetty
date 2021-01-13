@@ -1,0 +1,7 @@
+Bundle-Version: 1.0.0
+-buildpath: \
+	javax.servlet,\
+	osgi.cmpn;version='7.0.0'
+-privatepackage: org.foo.hello.world
+Bundle-SymbolicName: org.foo.hello.world
+Automatic-Module-Name: org.foo.hello.world
