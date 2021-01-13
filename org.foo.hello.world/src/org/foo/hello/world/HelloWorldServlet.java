@@ -10,14 +10,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
 
-@Component(service = Servlet.class, scope = ServiceScope.PROTOTYPE, property = "osgi.http.whiteboard.servlet.pattern=/hello")
+@Component(
+        service = Servlet.class,
+        scope = ServiceScope.PROTOTYPE,
+        property = "osgi.http.whiteboard.servlet.pattern=/hello")
 public class HelloWorldServlet extends HttpServlet {
 
-	private static final long serialVersionUID = -3502284765690010384L;
+    private static final long serialVersionUID = -3502284765690010384L;
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.getWriter().println("Hello World!");
-	}
-
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        resp.getWriter().println("Hello World!");
+    }
 }
